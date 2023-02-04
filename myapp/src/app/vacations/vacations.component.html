@@ -1,0 +1,121 @@
+<div *ngIf="vacations">
+  <app-login
+    *ngIf="showLoginModal && !showNewVacationModal && !showRegisterModal"
+  ></app-login>
+  <app-register
+    *ngIf="showRegisterModal && !showLoginModal && !showNewVacationModal"
+  ></app-register>
+  <app-new-vacation
+    *ngIf="showNewVacationModal && !showLoginModal && !showRegisterModal"
+  ></app-new-vacation>
+  <app-update-vacation
+    [vacation]="selectedVacation"
+    *ngIf="
+      showVacationUpdate &&
+      !showNewVacationModal &&
+      !showLoginModal &&
+      !showRegisterModal
+    "
+  ></app-update-vacation>
+  <app-delete-vacation
+    *ngIf="showVacationDelete"
+    [vacation]="selectedVacation"
+  ></app-delete-vacation>
+  <div id="header">
+    <ng-container *ngIf="modeUser; else guest">
+      <div class="user-guest-div">
+        <p class="hello-login-loguot">Hello, {{ nameOfUser }}...</p>
+        <button type="button" class="logout-btn" (click)="logout()">
+          Logout
+        </button>
+      </div>
+    </ng-container>
+    <ng-template #guest>
+      <ng-container
+        *ngIf="!modeUser && !modeAdmin && !showLoginModal; else admin"
+      >
+        <div class="user-guest-div">
+          <p class="hello-login-loguot">Hello, {{ nameOfUser }}...</p>
+          <button type="button" class="loggin-btn" (click)="loggin()">
+            Loggin
+          </button>
+        </div>
+      </ng-container>
+    </ng-template>
+    <ng-template #admin>
+      <ng-container *ngIf="modeAdmin">
+        <div class="user-guest-div">
+          <p class="hello-login-loguot">Hello, {{ nameOfUser }}... (Admin)</p>
+          <button type="button" class="logout-btn" (click)="logout()">
+            Logout
+          </button>
+          <button type="button" class="logout-btn" (click)="addNewVacation()">
+            Add New Vacation
+          </button>
+        </div>
+      </ng-container>
+    </ng-template>
+    <div id="topHeader">monster Vaction</div>
+  </div>
+
+  
+  <div
+    id="container"
+    *ngIf="
+      !showVacationUpdate &&
+      !showLoginModal &&
+      !showRegisterModal &&
+      !showNewVacationModal &&
+      !showVacationDelete
+    "
+  >
+    <div class="menu-item" *ngFor="let vacation of vacations">
+      <img class="img-menu" src="{{ vacation.img_url }}" alt="" />
+      <h1 class="menu-item-header">
+        {{ vacation.title }} in {{ vacation.destination }}
+      </h1>
+      <p class="menu-date">
+        From
+        {{ vacation.date_start.slice(0, vacation.date_start.length - 14) }} To
+        {{ vacation.date_end.slice(0, vacation.date_end.length - 14) }}
+      </p>
+      <p class="item-text">{{ vacation.description }}</p>
+      <p class="price">Just $ {{ vacation.price }}</p>
+      <button
+        class="admin-delete-icon"
+        *ngIf="modeAdmin && !modeUser"
+        (click)="handleDeleteEvent(vacation)"
+      >
+        Del
+      </button>
+      <button
+        class="admin-edit-icon"
+        *ngIf="modeAdmin && !modeUser"
+        (click)="handleUpdateEvent(vacation)"
+      >
+        Edit
+      </button>
+      <label for="like-follow-btn" class="like-follow-btn"></label>
+      <!-- <input
+        name="like-follow-btn"
+        *ngIf="modeUser"
+        type="radio"
+        class="like-icon"
+        (click)="handleCheck(vacation)"
+        checked="checked"
+      /> -->
+      <img
+
+        name="like-follow-btn"
+        *ngIf="modeUser"
+        class="like-icon"
+        [src]="
+        checkBox?.includes(vacation._id)
+            ? '../../assets/lib/icon-favorite/Active.png'
+            : '../../assets/lib/icon-favorite/Inactive.png'
+        "
+        (click)="handleCheck(vacation)"
+      />
+    </div>
+  </div>
+</div>

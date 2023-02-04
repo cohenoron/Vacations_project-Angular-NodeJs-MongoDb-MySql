@@ -1,0 +1,99 @@
+<div class="form-admin-container">
+  <form class="admin-form" (ngSubmit)="submitForm()">
+    <button class="close-admin-modal-icon" type="button" (click)="closeModal()">
+      X
+    </button>
+    <h3 class="form-admin-header">Add Vacation</h3>
+    <label class="form-admin-label">Title : </label>
+    <input
+      type="text"
+      name="title"
+      class="admin-form-input"
+      [(ngModel)]="title"
+      #titleInput="ngModel"
+      required
+    />
+    <!-- <div *ngIf="titleInput.invalid && titleInput.touched">
+      <p>Title is required</p> -->
+    <!-- </div> -->
+    <label class="form-admin-label">Category : </label>
+    <input
+      type="text"
+      name="category"
+      class="admin-form-input"
+      [(ngModel)]="category"
+      #categoryInput="ngModel"
+      required
+    />
+    <!-- <div *ngIf="categoryInput.invalid && categoryInput.touched">
+      <p>Category is required</p> -->
+    <!-- </div> -->
+    <label class="form-admin-label">Description : </label>
+    <textarea
+      class="admin-form-textarea"
+      type="text"
+      name="description"
+      [(ngModel)]="description"
+      #descriptionInput="ngModel"
+      required
+    ></textarea>
+    <!-- <div *ngIf="descriptionInput.invalid && descriptionInput.touched">
+      <p>Description is required</p> -->
+    <!-- </div> -->
+    <label class="form-admin-label">Destination : </label>
+    <input
+      class="admin-form-input"
+      type="text"
+      name="destination"
+      [(ngModel)]="destination"
+      #destinationInput="ngModel"
+      required
+    />
+    <!-- <div *ngIf="destinationInput.invalid && destinationInput.touched">
+      <p>Destination is required</p> -->
+    <!-- </div> -->
+    <label class="form-admin-label">Img_url : </label>
+    <textarea
+      class="admin-form-textarea"
+      type="text"
+      name="img_url"
+      [(ngModel)]="img_url"
+      #imgUrlInput="ngModel"
+      required
+    ></textarea>
+    <!-- <div *ngIf="imgUrlInput.invalid && imgUrlInput.touched">
+      <p>Img_url is required</p> -->
+    <!-- </div> -->
+    <label class="form-admin-label">Date Start :</label>
+    <input
+      class="admin-form-input"
+      type="date"
+      name="date_start"
+      [(ngModel)]="date_start"
+      #dateStartInput="ngModel"
+      required
+    />
+    <label class="form-admin-label">Date End :</label>
+    <input
+      class="admin-form-input"
+      type="date"
+      name="date_end"
+      [(ngModel)]="date_end"
+      #dateEndInput="ngModel"
+      required
+    />
+    <label class="form-admin-label">Price :</label>
+    <input
+      type="text"
+      name="price"
+      class="admin-form-input"
+      [(ngModel)]="price"
+      #priceInput="ngModel"
+      required
+    />
+    <button class="submit-admin-form" type="submit">Add Vacation</button>
+    <!-- <div *ngIf="dateStartInput.invalid && dateStartInput.touched">
+      <p>Date Start is required</p> -->
+    <!-- </div> -->
+  </form>
+</div>

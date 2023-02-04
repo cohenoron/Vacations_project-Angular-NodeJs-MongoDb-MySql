@@ -1,0 +1,67 @@
+
+#form-delete-container {
+    background-image: url('../../assets/lib/Monster-Energy-Font-Family-Free-Download.jpg');
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 20px 20px 60px #3ad349, -20px -20px 60px #0c0101;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #close-delete-modal-icon {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color:black;
+    height: 30px;
+    width: 30px;
+    margin: 30px;
+    font-weight: bolder;
+    background-color: #3ad349;
+    border-radius: 20px;
+
+  }
+  
+  #form-delete {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 100px 50px 50px auto;
+    display: grid;
+    text-align: right;
+  }
+  #form-delete-header {
+    color: red;
+    font-size: 36px;
+    font-family: 'green energy';
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  #form-delete-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 25px;
+    color: g;
+    border-radius: 20px;
+    background-color: red;
+    height: 40px;
+    width: 150px;
+    border: solid 2px greenyellow;
+    margin: auto;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,63 @@
+<div id="form-register-container">
+    <form id="form-register">
+      <button
+      id="form-register-closeModal-icon"
+      type="button"
+      (click)="closeModal()"
+    >
+      X
+    </button>
+      <!-- <fa-icon id="form-register-closeModal-icon" icon="fa-window-close" (click)="setOpenRegisterModal(false)"></fa-icon> -->
+      <h3 id="form-register-header">Register</h3>
+      <label class="form-register-lable"></label>
+      <input
+        class="form-register-input"
+        type="text"
+        name="firstName"
+        placeholder="First Name "
+        [(ngModel)]="firstName"
+      />
+      <!-- <p *ngIf="errors?.firstName">{{errors.firstName.message}}</p> -->
+      <label class="form-register-lable"></label>
+      <input
+        class="form-register-input"
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        [(ngModel)]="lastName"
+      />
+      <!-- <p *ngIf="errors?.lastName">{{errors.lastName.message}}</p> -->
+      <label class="form-register-lable"></label>
+      <input
+        class="form-register-input"
+        type="text"
+        name="userName"
+        placeholder="User Name"
+        [(ngModel)]="userName"
+      />
+      <!-- <p *ngIf="errors?.userName">{{errors.userName.message}}</p> -->
+      <label class="form-register-lable"></label>
+      <input
+        class="form-register-input"
+        type="password"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+      />
+      <!-- <p *ngIf="errors?.password">{{errors.password.message}}</p> -->
+      <label class="form-register-lable"></label>
+      <input
+        class="form-register-input"
+        type="password"
+        name="passwordVerification"
+        placeholder="Password Verification"
+        [(ngModel)]="passwordVerification"
+        
+       
+      />
+      <!-- <p *ngIf="errors?.passwordVerification">{{errors.passwordVerification.message}}</p> -->
+      <input id="form-register-submitBtn" value="Register" type="submit" (click)="submitRegister()" />
+      <!-- <h4 id="message-after-register" *ngIf="message">{{message}}</h4> -->
+    </form>
+  </div>
+  

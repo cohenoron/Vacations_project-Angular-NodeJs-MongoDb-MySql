@@ -1,0 +1,118 @@
+/* admin form for update || adding new vacations ---------------------------------------------------------------------------------------------------- */
+
+.form-admin-container {
+    background-image: url('../../assets/lib/Monster-Energy-Font-Family-Free-Download.jpg');
+    margin-top: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: 20px 20px 60px #3ad349, -20px -20px 60px #0c0101;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-admin-header {
+    color: #3ad349;
+    font-size: 50px;
+    font-family: 'green energy';
+    text-align: left;
+    height: 60px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto;
+  }
+  
+  .admin-form {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 140px auto 140px;
+    grid-template-rows: 70px auto auto auto auto auto auto auto auto auto 70px;
+    display: grid;
+    text-align: right;
+  }
+  
+  .admin-form-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: left;
+    font-size: 14px;
+    height: 35px;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+  
+  .admin-form-textarea {
+    text-align: left;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 18px;
+    height: 50px;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+  
+  .admin-form p {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-style: bold;
+    font-size: 12px;
+    color: #3ad349;
+    margin: 10px 10px 10px;
+    text-align: left;
+    text-transform: capitalize;
+  }
+  
+  .form-admin-label {
+    color: #3ad349;
+    font-weight: bold;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
+  }
+  
+  .submit-admin-form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 25px;
+    color: black;
+    border-radius: 20px;
+    background-color: #3ad349;
+    height: 35px;
+    border: solid 2px greenyellow;
+  }
+  .close-admin-modal-icon {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: black;
+    font-weight: bolder;
+    height: 30px;
+    width: 30px;
+    margin: 30px;
+    background-color: #3ad349;
+    border-radius: 20px;
+  }
+  
+  #message-after-admin-submission {
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    font-style: bold;
+    font-size: 18px;
+    color: #3ad349;
+    margin: 10px 10px 10px;
+    margin: auto;
+    text-transform: capitalize;
+    text-align: center;
+  }

@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@angular/cdk": "^15.1.2",
+    "@angular/common": "^15.1.2",
+    "@angular/core": "^15.1.2",
+    "@angular/material": "^15.1.2",
+    "axios": "^1.2.6",
+    "js-cookie": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.2"
+  }
+}
